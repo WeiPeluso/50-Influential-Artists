@@ -208,10 +208,20 @@ const artists = [
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
 
+console.log('Task 1');
+console.log(artists[0].name);
+console.log(artists[2]);
 
 
-/* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
+/* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. 
+Use an array method to fix this issue and console.log() to check your work. */
+
+console.log('Task 2');
+
+
+artists[10].name='Vincent Van Gogh';
+console.log(artists[10]);
 
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
@@ -224,8 +234,14 @@ const artists = [
 */
 function getArtistByIndex(id, name) {
     /* code here */
+    return `The artist at index ${id} is ${name[id].name}`;
+
   }
   
+  console.log('Task 3');
+  console.log(getArtistByIndex(10, artists));
+
+
   /**
 
 
@@ -237,31 +253,62 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(arr,index) {
+  arr.splice(index,index);
   }
+
+
+     console.log('Task 4');
+    removeArtist(artists,1);
+     console.log('removed second artist, check the list');
+     console.log(artists);
   
   /**
 
 
-/* Task 5: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
+/* Task 5: Create a function called get20s() that takes data as an argument and 
+returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(/* Code here */){
+function get20s(arr){
+  let result=[];
 
-    /* Code here */
+   for(let i=0;i<arr.length;i++){
+     if((arr[i].years.substring(0,4)>= 1800) &&
+     (arr[i].years.substring(0,4)<=1900))
+     {
+       result.push(arr[i].name);
+     }
+   }
+  return result;
+ }
+console.log('task 5');
+console.log("artists who were born in the 20th century");
+console.log(get20s(artists));
 
-  }
-
-/* Task 6: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
-
-function lotsOfArt(/* Code here */){
-
-    /* Code here */
-
-  }
+/* Task 6: Create a function called lotsOfArt() that takes artists as an argument and 
+returns an array with names of artists who painted more than 100 paintings */
 
 
-/* Task 7: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
+function lotsOfArt(arr){
+
+  let result=[];
+
+ for(let i=0;i<arr.length;i++){
+   if(arr[i].paintings>100);{
+   result.push(arr[i].name);
+ }
+
+}
+ return result;
+}
+
+console.log('task 6');
+console.log("anames of artists who painted more than 100 paintings ");
+console.log(lotsOfArt(artists));
+
+
+/* Task 7: Create a function called `addArtist` that can accept an array of information and add it to the artists array. 
+Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
 id: 21
 name: Your Name Here, 
@@ -270,20 +317,61 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
+function addArtist(info){
+    
+  for(let i=0;i<info.length;i++){
 
-    /* Code here */
-
+    artists.push(info[i]);
   }
 
+}
 
-/* Task 8: Create a function called `checkArtist` that accepts a string (name of an artist) and checks if that artist is in the dataset. */
+console.log('task 7')
 
-function checkArtist(/* Code here */){
+let addArr=[{"id": 20,
 
-    /* Code here */
+      "name": "Vivian Atwood",
+      "years": "1471 - 1528",
+      "genre": "Northern Renaissance",
+      "nationality": "German",
+      "bio": "Albrecht Dürer (; German: [ˈʔalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528) sometimes spelt in English as Durer or Duerer, without umlaut, was a painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his reputation and influence across Europe when he was still in his twenties due to his high-quality woodcut prints.",
+      "wikipedia": "http://en.wikipedia.org/wiki/Albrecht_Dürer",
+      "paintings": 328},
+      
+      {"id": 21,
+      "name": "Casey Neistate",
+      "years": "1471 - 1528",
+      "genre": "Northern Renaissance",
+      "nationality": "German",
+      "bio": "Albrecht Dürer (; German: [ˈʔalbʁɛçt ˈdyːʁɐ]; 21 May 1471 – 6 April 1528) sometimes spelt in English as Durer or Duerer, without umlaut, was a painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his reputation and influence across Europe when he was still in his twenties due to his high-quality woodcut prints.",
+      "wikipedia": "http://en.wikipedia.org/wiki/Albrecht_Dürer",
+      "paintings": 328}]
 
-  }
+addArtist(addArr)
+console.log('Added two artist , id 20 and id 21')
+console.log(artists);
+
+/* Task 8: Create a function called `checkArtist` 
+that accepts a string (name of an artist) and checks if that artist is in the dataset. */
+
+function checkArtist(name){
+  let result=false; 
+   for(let i=0;i<artists.length;i++){
+   if(artists[i].name===name){
+     result=true;
+   }
+   }
+if(result===true){
+  console.log(`Yes,  ${name} is in the dataset`);
+}
+else{
+  console.log(`No, ${name} is not in the dataset`);
+}
+
+}
+
+checkArtist("Wei");
+checkArtist("Diego Rivera");
 
 
 
@@ -318,13 +406,22 @@ function getHTML(/* Code here */){
   }
 
 
-/* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
+/* STRETCH 2: Create a function called `randomize` that takes a data array as an argument 
+and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
+function randomize(arr){
 
-    /* Code here */
+   for(let i=arr.length-1;i>0;i--){
+        const newIndex= Math.floor(Math.random()*(i+1));
+        [arr[i],arr[newIndex]]=[arr[newIndex],arr[i]];
+
+   }
+   return arr;
 
   }
 
+  console.log("Stretch 2")
+  console.log('randomized artists list')
+  console.log(randomize(artists))
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */

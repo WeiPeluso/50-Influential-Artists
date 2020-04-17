@@ -1,0 +1,70 @@
+.title-container{
+    height:0.3rem;
+    position: relative; 
+    top: 20px; 
+    border: none; 
+    background-color: @hr; 
+    margin-bottom: 50px; 
+}
+
+.artists-container{
+
+    .displayRow();
+    justify-content: space-around;
+    @media @phone{
+        .displayColumn();
+    }
+ 
+
+    .artist{
+          width:40%;
+        
+          @media @phone{
+            width:70%;
+        }
+
+       img{
+       
+           width:100%;
+           border-radius: 5%;
+           margin-bottom: 2%;
+
+        
+       }//end of img
+        
+     .info{
+         align-items: center;
+         text-align: center;
+
+         a{
+        
+            text-decoration: none;
+            font-size:3rem;
+            color:black;
+
+         }// end of a
+
+
+         .bio{
+
+            font-size:1.5rem;
+            margin-top: 5%;
+            color:black;
+             text-align: center;
+
+             @media @phone{
+              margin-bottom:  15%;;
+            }
+    
+
+         }
+     }//end of info
+
+
+    }//end of artist
+}//end of artists-container
+
+img:hover{
+opacity: 80%;
+
+}

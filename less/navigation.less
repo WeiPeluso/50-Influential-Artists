@@ -1,0 +1,182 @@
+.header{
+
+    .displayColumn();
+     width:100%;
+ 
+     .tag{
+ 
+         width:40%;
+         @media @tablet{
+            
+            width:50%;
+         }
+
+         @media @phone{
+           
+             width:80%
+         }
+     .links{
+          font-size: 4rem;
+          letter-spacing: 3px;
+          width:100%;
+          .displayRow();
+          padding-bottom:5%;
+ 
+          @media @tablet{
+             font-size: 3rem;
+             padding-bottom:2%;
+         }
+ 
+         @media @phone{
+            font-size: 2rem;
+        }
+          a{
+ 
+          display:block;
+          text-decoration: none;
+          color:black;
+           margin-top:4%;
+ 
+          }//end of a
+ 
+          hr{
+             height: 5rem; 
+             border-left: 0.3rem solid @hr; 
+ 
+             @media @tablet{
+                 height: 4rem; 
+             }
+             @media @phone{
+                height: 3rem; 
+            }
+  
+          }//end of hr
+ 
+     }// end of links
+ 
+ }//end of tags
+ 
+ 
+     .text-box{
+         height:80vh;
+         width:90%;
+         background-image: url(/assets/home.png);
+         color:white;
+         text-transform: capitalize;
+         backface-visibility: hidden;
+         background-size:cover;
+         background-position: top;
+         font-size: 10rem;
+         margin-bottom: 3%;
+ 
+         @media @tablet{
+ 
+             font-size: 6rem;
+ 
+         }
+ 
+         @media @phone{
+            font-size: 4rem;
+            height:70vh;
+        }
+ 
+ 
+     .heading-primary{
+         width:100%;
+         height: 100%;;
+         .displayColumn();
+         justify-content: center;
+       
+ 
+       .heading1{
+           
+           display:block;
+           animation-name: moveInLeft;
+           animation-duration: 3s;
+           animation-timing-function: ease-out;
+       
+         
+            
+       }
+       
+       .heading2{
+         display:block;
+         animation: moveInRight;
+         animation-duration: 3s;
+         animation-timing-function: ease-out;
+     }
+     
+ 
+     .contact{
+ 
+         button{
+                 .button(center,3rem);
+                 padding: 15px 32px;
+                 border-radius: 5%;
+                 text-transform: capitalize;
+                 @media @tablet{
+                     .button(center,1.5rem);
+                     padding: 8px 16px;
+                      border-radius: 10%;
+                 }
+ 
+                 @media @phone{
+                    .button(center,1.2rem);
+                    padding: 6px 13px;
+                     border-radius: 10%;
+                }
+         }
+ 
+ 
+     }//end of contact us
+ 
+ }//end of heading primary
+       
+ }//end of text box
+ 
+ }//end of header
+ 
+ 
+ 
+ 
+ 
+ //animation
+ @keyframes moveInLeft{
+ 
+     0%{
+       opacity:0;
+       transform: translateX(-100px);
+        
+  
+     }
+     
+     80%{
+        transform: translateX(10px);
+    
+     }
+  
+     100%{
+      opacity:1;
+      transform: translate(0);
+     }
+  }
+  
+  @keyframes moveInRight{
+  
+      0%{
+        opacity:0;
+        transform: translateX(100px);
+         
+   
+      }
+      
+      80%{
+         transform: translateX(-10px);
+     
+      }
+   
+      100%{
+       opacity:1;
+       transform: translate(0);
+      }
+   }

@@ -2,11 +2,11 @@
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
-This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a concrete project. This Sprint explored Advanced CSS and JavaScript fundamentals. During this Sprint, you studied studied preprocessing, variable declaration, conditionals, loops, functions, arrays, and objects. In your challenge this week, you will demonstrate proficiency by creating a website for artisits with data from a `JSON` object.
+This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a concrete project. This Sprint explored Advanced CSS and JavaScript fundamentals. During this Sprint, you studied studied preprocessing, variable declaration, conditionals, loops, functions, arrays, and objects. In your challenge this week, you will demonstrate proficiency by creating a website for recipes with data from a `JSON` object.
 
 This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
 
-You are not allowed to collaborate during the Sprint Challenge. However, you are encouraged to follow the twenty-minute rule and seek support from your TL if you need direction. Your work reflects your proficiency in Preprocessing, and JavaScript Basics.
+You are not allowed to collaborate during the Sprint Challenge. However, you are encouraged to follow the twenty-minute rule and seek support from your TL if you need direction. Your work reflects your proficiency in user interface and your command of the concepts and techniques in semantic HTML, CSS fundamentals, git, and responsive design.
 
 > You have **three hours** to complete this challenge. Plan your time accordingly.
 
@@ -25,12 +25,40 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. How would you describe preprocessing to someone new to CSS?
+
+CSS preprocessors are scripting languages that extend the default capabilities of CSS. They enable us to use logic in our CSS code, such as variables, nesting, inheritance, mixins, functions, and mathematical operations.
+
 2. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+My favorite concept in preprocessing is minxins, it saves time of writing repeated codes also make changes are much easier.
+I didn't have hard times on those concepts.
+
 3. How would you explain the concept of a variable to someone new to programming?
+   
+    A variable is holding some value , such as color, size, and in css preprocessing, a varibale can be used globally.
+    for example. you set @color: purple. All the headers color are purple, if you want to change all headers color, you just have to 
+    change the varibale value once , all the header's color will be changed.
+
 4. What is the purpose of using functions in code?
+
+A JavaScript function is a block of code designed to perform a particular task.
+
+A JavaScript function is executed when "something" invokes it (calls it).
+
+The purpose of using functions is avoiding repeated code, when ever you need perform a particular task, just invokes the function.
+
 5. What is a JSON data?
 
-You may need to look up an answer but, you are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
+Didn't cover in class, google searched it:
+
+JSON: JavaScript Object Notation.
+
+JSON is a syntax for storing and exchanging data.
+
+JSON is text, written with JavaScript object notation.
+
+
+You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
 ## Instructions
 
@@ -41,15 +69,16 @@ Follow these steps to set up your project:
 #### Git Set up
 
 - [ ] Create a forked copy of this project.
-- [ ] Add your Team Lead as collaborator on Github.
+- [ ] Add your project manager as collaborator on Github.
 - [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
 - [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
 
 #### Preprocessor Set up
 
 * [ ] Verify that you have LESS installed correctly by running `lessc -v` in your terminal, if you don't get a version message back, reach out to your project manager for help.
-* [ ] In your project's root folder, run the following command `less-watch-compiler less css index.less`
-* [ ] Verify your compiler is working correctly by changing the `background-color` on the `body` selector to `red` in your `index.less` file.
+* [ ] Open your terminal and navigate to your preprocessing project by using the `cd` command
+* [ ] Once in your project's root folder, run the following command `less-watch-compiler less css index.less`
+* [ ] Verify your compiler is working correctly by changing the `background-color` on the `html` selector to `red` in your `index.less` file.
 * [ ] Once you see the red screen, you can delete that style and you're ready to start on the next task
 
 ### Task 2a:  Minimum Viable Product - PreProcessing
@@ -74,7 +103,7 @@ _You will know everything is working properly when you see the styles enabled fo
 
 * [ ] Take 10 minutes to review the code that has already been provided for you. Take time to see how the home page was built.
 * [ ] Add a viewport meta tag to the head of your index.html page
-* [ ] [Review the provided home desktop design file](design/Desktop.png). You are to build the missing navigation system and header image. You have been provided all content necessary in the [index.html file](index.html)
+* [ ] [Review the provided home desktop design file](design/home.png). You are to build the missing navigation system and header image. You have been provided all content necessary in the [index.html file](index.html)
 * [ ] Navigation Styles: Use the `navigation.less` file for styling.
 * [ ] Main Content Styles: Use the `main.less` file for styling
 * [ ] LESS Mixins: Create and use 2 different mixins to aid your styling. Use the `mixins.less` file for your mixins
